@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Component
 public class CouponService {
@@ -15,6 +16,10 @@ public class CouponService {
     public String getNewCoupon(){
         return couponHelper.newCoupon();
 
+    }
+    public String newCoupon(){
+        UUID uuid = UUID.randomUUID();
+        return uuid.toString();
     }
 
     public List<String> getNewCoupon(int quantity){
@@ -28,6 +33,6 @@ public class CouponService {
     }
 
     //feature
-    //get new copu[an
+    //get new coupon
 
 }
